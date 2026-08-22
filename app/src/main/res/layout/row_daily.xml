@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="350dp"
+    android:layout_height="66dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background_hourly"
+            android:orientation="horizontal"
+            android:weightSum="22">
+
+            <TextView
+                android:id="@+id/tvDayOfWeek"
+                android:layout_width="0dp"
+               android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_height="match_parent"
+                android:layout_weight="7"
+
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/imgDay"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="2" />
+
+            <TextView
+                android:id="@+id/weatherState"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="8"
+
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tvTempDay"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+
+                android:layout_weight="4"
+                  android:gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="3dp"
+                android:fontFamily="@font/inter18pltight"
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

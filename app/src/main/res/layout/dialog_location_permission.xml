@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Location Permission Needed"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold"
+        android:paddingBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/dialog_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="This app needs location access. Please choose the level of accuracy:"
+        android:paddingBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btn_fine_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fine Location"
+        android:padding="8dp"/>
+
+    <Button
+        android:id="@+id/btn_coarse_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Coarse Location"
+        android:padding="8dp"/>
+</LinearLayout>

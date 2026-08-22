@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/menucolor"
+
+
+    tools:context=".settingscreen.view.SettingFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewLanguage"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="30dp"
+        app:cardCornerRadius="30dp"
+        app:layout_constraintEnd_toStartOf="@+id/WindSpeedcard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/backgroundday"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/londrinasolidregular"
+                android:text="@string/language"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/EnRadioButton"
+                    android:layout_width="wrap_content"
+                    android:buttonTint="@color/white"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:width="150dp"
+                    android:height="53dp"
+
+                    android:background="@drawable/radio_radius"
+
+                    android:text="@string/english"
+                    android:textColor="@color/white" />
+
+                <RadioButton
+                    android:id="@+id/ArRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/white"
+                    android:layout_marginTop="10dp"
+                    android:width="150dp"
+                    android:height="53dp"
+                    android:background="@drawable/radio_radius"
+                    android:text="@string/arabic"
+
+                    android:textColor="@color/white" />
+            </RadioGroup>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/WindSpeedcard"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        app:cardCornerRadius="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/backgroundday"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/windspeed"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/londrinasolidregular"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/WindhourRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:width="150dp"
+                    android:height="53dp"
+                    android:buttonTint="@color/white"
+                    android:background="@drawable/radio_radius"
+                    android:text="@string/miles_hour"
+                    android:textColor="@color/white" />
+
+                <RadioButton
+                    android:id="@+id/WindSecRadioButton1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:width="150dp"
+                    android:height="53dp"
+                    android:buttonTint="@color/white"
+                    android:background="@drawable/radio_radius"
+                    android:text="@string/meter_sec"
+                    android:textColor="@color/white" />
+            </RadioGroup>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="260dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="130dp"
+        app:cardCornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cardViewLocation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewLanguage">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/backgroundday"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/londrinasolidregular"
+                android:text="@string/temperature"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                     android:layout_marginBottom="30dp"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/tempKelvinRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:width="150dp"
+                    android:height="53dp"
+                    android:buttonTint="@color/white"
+                    android:background="@drawable/radio_radius"
+                    android:text="@string/kelvin"
+                    android:textColor="@color/white" />
+
+                <RadioButton
+                    android:id="@+id/tempCelsiusRadioButton1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:width="150dp"
+                    android:height="53dp"
+                    android:buttonTint="@color/white"
+                    android:background="@drawable/radio_radius"
+
+                    android:text="@string/celsius"
+                    android:textColor="@color/white" />
+
+
+                <RadioButton
+                    android:id="@+id/tempFahreRadioButton1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:width="150dp"
+                    android:height="53dp"
+                    android:buttonTint="@color/white"
+                    android:background="@drawable/radio_radius"
+                    android:text="@string/fahrenheit"
+
+                    android:textColor="@color/white" />
+            </RadioGroup>
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="300dp"
+        app:cardCornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cardViewTemp"
+        app:layout_constraintTop_toBottomOf="@+id/WindSpeedcard"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/backgroundday"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/location"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/londrinasolidregular"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                  style="@style/ColorForSelectRadioButton"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/GPSRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:width="150dp"
+                    android:buttonTint="@color/white"
+                    android:height="53dp"
+                    android:background="@drawable/radio_radius"
+
+
+                    android:text="@string/gps"
+                    android:textColor="@color/white" />
+
+                <RadioButton
+                    android:id="@+id/MapRadioButton1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:width="150dp"
+                    android:height="53dp"
+                    android:buttonTint="@color/white"
+                    android:background="@drawable/radio_radius"
+                    android:text="@string/map"
+
+                    android:textColor="@color/white" />
+            </RadioGroup>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+
+
+    <color name="blue_light">#2E367C</color>
+    <color name="blue_dark1">#261162</color>
+    <color name="blue_dark2">#261162</color>
+    <color name="yellow"> #DDB130</color>
+    <color name="bluebtn">#140C44</color>
+    <color name="menucolor"> #00031B</color>
+    <color name="weathercard">#4851A0 </color>
+    <color name="background_day_gradian_1">#3E2D8F</color>
+
+    <color name="background_hourly">#131951</color>
+    <color name="background_radioButton">#040109</color>
+    <color name="dialog_alert_color">#352099 </color>
+    <color name="row_alarm_color"> #112C71 </color>
+    <color name="background_day_gradian_2">#8E78C8</color>
+
+
+</resources>

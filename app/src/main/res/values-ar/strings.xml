@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name"> اخبار الطقس</string>
+    <string name="weather">الطقس</string>
+    <string name="forecast">التنبؤ</string>
+
+    <string name="delete_fav_title">حذف المفضلة</string>
+    <string name="delete_fav_message">هل أنت متأكد أنك تريد حذف هذه المفضلة؟</string>
+    <string name="yes">نعم</string>
+    <string name="cancel">إلغاء</string>
+
+    <string name="delete_alarm_title">حذف التنبيه</string>
+    <string name="delete_alarm_message">هل أنت متأكد أنك تريد حذف هذا التنبيه؟</string>
+
+    <string name="language">اللغه</string>
+    <string name="english">الانجلزيه</string>
+    <string name="arabic">العربيه</string>
+
+    <string name="windspeed">سرعه الرياح</string>
+    <string name="miles_hour">ميل/الساعه</string>
+    <string name="meter_sec">متر/ثانيه</string>
+    <string name="temperature">درجه الحراره</string>
+    <string name="kelvin">كلفين</string>
+    <string name="celsius">سلسيوس</string>
+    <string name="fahrenheit">فهرنهايت</string>
+    <string name="location">الموقع</string>
+    <string name="gps">جي بي اس</string>
+    <string name="map">الخريطه</string>
+
+    <string name="no_alert_weather">لا يوجد تنبيه، الطقس جيد</string>
+
+    <string name="humidity_label">الرطوبة %1$d%%</string>
+    <string name="cloud_label">الغيوم %1$d%%</string>
+    <string name="pressure_label">الضغط %1$d</string>
+    <string name="wind_speed_label">سرعة الرياح %1$.1f</string>
+    <string name="no_alert_weather_good">لا يوجد تنبيه: الطقس جيد</string>
+
+    <string name="from">من</string>
+    <string name="to">الي</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment"> لسه </string>
+    <string name="Hourly_forecasts"> توقعات الطقس علي مدار الساعات </string>
+    <string name="home">الصفحه الرئيسه</string>
+    <string name="fav">التفضيلات</string>
+    <string name="alert">تنبيه</string>
+    <string name="settings">الاعدادات
+    </string>
+</resources>

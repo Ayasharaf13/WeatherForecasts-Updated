@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/menucolor"
+    android:scrollbarSize="24sp"
+    android:layoutDirection="locale"
+    app:circularflow_defaultRadius="50dp">
+
+    <!-- Wrapping content in a NestedScrollView -->
+    <!-- Main Content Container -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutMainContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:fillViewport="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:ignore="MissingConstraints" >
+
+
+        <TextView
+            android:id="@+id/tvsky"
+            android:layout_width="144dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/poppins"
+            android:textColor="#F3E6E6"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvtemp" />
+
+
+        <TextView
+            android:id="@+id/tvdata_time"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="25dp"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:textColor="#EFE6E6"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.692"
+            app:layout_constraintStart_toEndOf="@+id/tvsky"
+            app:layout_constraintTop_toBottomOf="@+id/tvtemp" />
+
+        <TextView
+            android:id="@+id/tvtemp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:text=""
+            android:textColor="#E8DFDF"
+            android:textSize="36sp"
+            app:layout_constraintEnd_toEndOf="@+id/tvcity"
+            app:layout_constraintStart_toStartOf="@+id/tvcity"
+            app:layout_constraintTop_toBottomOf="@+id/tvcity" />
+
+        <TextView
+            android:id="@+id/tvcity"
+            android:layout_width="170dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/opensans"
+
+            android:gravity="center"
+            android:text=" "
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewHum"
+        android:layout_width="151dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="1dp"
+        android:backgroundTint="@color/weathercard"
+        app:cardCornerRadius="100dp"
+        app:layout_constraintEnd_toStartOf="@+id/cardViewCloud"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvsky">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4"
+
+            >
+
+            <TextView
+                android:id="@+id/tvHum"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="20dp"
+                android:drawableRight="@drawable/humidity"
+                android:fontFamily="@font/roboto"
+                android:gravity="center"
+                android:text=" "
+
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewCloud"
+        android:layout_width="151dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="35dp"
+
+        android:layout_marginEnd="35dp"
+        android:backgroundTint="@color/weathercard"
+        app:cardCornerRadius="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cardViewHum"
+        app:layout_constraintTop_toBottomOf="@+id/tvdata_time">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/tvCloud"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="20dp"
+                android:drawableRight="@drawable/ic_baseline_cloud_24"
+                android:fontFamily="@font/roboto"
+                android:gravity="center"
+                android:text=" "
+
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewWind"
+        android:layout_width="151dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="35dp"
+        android:backgroundTint="@color/weathercard"
+        app:cardCornerRadius="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cardViewPress"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewCloud">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/tvPress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="20dp"
+
+                android:drawableRight="@drawable/press"
+                android:fontFamily="@font/roboto"
+                android:gravity="center"
+                android:text=" "
+
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewPress"
+        android:layout_width="151dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="1dp"
+        android:backgroundTint="@color/weathercard"
+        app:cardCornerRadius="100dp"
+        app:layout_constraintEnd_toStartOf="@+id/cardViewWind"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewHum">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:weightSum="4">
+
+
+            <TextView
+                android:id="@+id/tvWind"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="15dp"
+
+                android:drawableRight="@drawable/wind_speed"
+                android:fontFamily="@font/roboto"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_Hourly"
+            android:foregroundGravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="5dp"
+
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="37dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/opensans"
+            android:text="@string/Hourly_forecasts"
+            android:textColor="#E8E0E0"
+            android:textSize="24dp"
+            app:layout_constraintBottom_toTopOf="@+id/recycler_Hourly"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardViewWind" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewDaily"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+              android:layout_marginTop="40dp"
+            android:nestedScrollingEnabled="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recycler_Hourly" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="71dp"
+            android:layout_height="97dp"
+
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="55dp"
+
+
+            android:background="?attr/selectableItemBackground"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+            app:layout_constraintBottom_toTopOf="@+id/recyclerViewDaily"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/recycler_Hourly" />
+
+        <ImageButton
+            android:id="@+id/imageButtonBack"
+            android:layout_width="71dp"
+            android:layout_height="97dp"
+            android:layout_marginStart="4dp"
+            android:scaleType="fitCenter"
+            android:layout_marginTop="56dp"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/recycler_Hourly"
+            app:srcCompat="@drawable/ic_baseline_arrow_back_ios_24" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- Isolated No Internet State -->
+        <LinearLayout
+            android:id="@+id/layoutNoInternet"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imgNoInternet"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:contentDescription="No Internet Connection"
+                android:src="@drawable/no_internet" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="No Internet Connection"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnRetry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Retry" />
+
+        </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+

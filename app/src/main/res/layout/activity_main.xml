@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="locale"
+    android:background="@drawable/backgroundsplash"
+  >
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieAnimationView"
+        android:layout_width="387dp"
+        android:layout_height="211dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/animation_weather"
+        tools:ignore="MissingConstraints" />
+
+
+    <TextView
+        android:id="@+id/text_weather"
+        android:layout_width="189dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="35dp"
+        android:fontFamily="@font/saralaregular"
+        android:text="@string/weather"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toTopOf="@+id/text_forecasts"
+        app:layout_constraintEnd_toEndOf="@+id/text_forecasts"
+        app:layout_constraintStart_toStartOf="@+id/text_forecasts"
+        app:layout_constraintTop_toBottomOf="@+id/lottieAnimationView" />
+
+    <TextView
+        android:id="@+id/text_forecasts"
+        android:layout_width="213dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="101dp"
+        android:layout_marginEnd="101dp"
+        android:fontFamily="@font/saralaregular"
+        android:text="@string/forecast"
+        android:textColor="@color/yellow"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_weather" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="297dp"
+        android:layout_height="87dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="76dp"
+        android:backgroundTint="@color/bluebtn"
+        android:fontFamily="@font/intersemibold"
+        android:text="Get Start"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:cornerRadius="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/background_hourly"
+
+    android:layout_height="match_parent"
+    android:layoutDirection="locale">  <!-- ✅ Make layout adjust for RTL/LTR automatically -->
+    >
+
+
+    <ImageView
+        android:id="@+id/nav_header_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="20dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/menueimg"
+        android:autoMirrored="true"
+        app:layout_constraintEnd_toStartOf="@+id/txtWeatherDrawer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtWeatherDrawer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:autoMirrored="true"
+        android:text="Weather"
+        android:fontFamily="@font/lexendregular"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        app:layout_constraintStart_toEndOf="@+id/nav_header_image"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
