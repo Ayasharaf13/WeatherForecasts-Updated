@@ -4,13 +4,14 @@
 >
 > ----------------
 >
-> ## 🛠️ Tech Stack & Architecture
+## 🛠️ Tech Stack & Architecture
 
 * **Language:** Kotlin
-* **UI Framework:** XML
-* **Navigation:** Navigation Component
-* **Architecture:**  MVVM (Model-View-Intent)
+* **UI Framework:** Android SDK (XML Layouts)
+* **Architecture:** MVVM (Model-View-ViewModel)
+* **Navigation:** Navigation Component 
 * **Networking:** Retrofit
-* **Location Services:** Fused Location Provider API
+* **Location & Maps:** Fused Location Provider API & Google Maps SDK
+* **Task Scheduling:** AlarmManager (Precise Background Timing)
 * **Asynchronous Programming:** Kotlin Coroutines & Flow
-* **Local Caching:** Room Database / Shared preference
+* **Local Caching:** Room Database & SharedPreferences
