@@ -31,7 +31,7 @@
 ## 🎬 App Flow Demo & Screenshots
 
 <p align="center">
-<img width="260"  alt="video-scoretask_resize" src="https://github.com/user-attachments/assets/7389a3ae-5001-4edc-963a-ae09df1e5982" />
+<img width="340"  alt="video-scoretask_resize" src="https://github.com/user-attachments/assets/7389a3ae-5001-4edc-963a-ae09df1e5982" />
 </p>
 
 
